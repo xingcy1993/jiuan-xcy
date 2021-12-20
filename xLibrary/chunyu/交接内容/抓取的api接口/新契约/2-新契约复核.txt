@@ -1,0 +1,72 @@
+1.updatePropStatus接口
+http://10.1.6.11/pos-commu/propProcess/updatePropStatus.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalId=42033925112521066&oldStatus=21&newStatus=22&magicX=4b01695f278093f1b1a4488da21c4068
+响应：
+{"message":"锁定任务成功","others":null,"success":true}
+
+2.0复核-valiDateRule接口
+http://10.1.6.11/pos-commu/nBEntryRule/valiDateRule.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalId=42073903544931503
+响应：
+{"message":"ok","others":null,"success":true}
+
+2.1复核-checkOSEntryIssue接口
+http://10.1.6.11/pos-commu/outEntryIssue/checkOSEntryIssue.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+policyId=42073903544931503
+响应：
+{"message":null,"others":null,"success":false}
+
+2.2复核-checkPolicyDeliveryMode接口
+http://10.1.6.11/pos-commu/personal/entry/proposal/checkPolicyDeliveryMode.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalId=42073903544931503
+响应：
+{"message":null,"others":null,"success":true}
+
+2.3复核-checkBankInfo接口
+http://10.1.6.11/pos-commu/propProcess/checkBankInfo.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalNo=2020061620223894
+响应：
+{"message":"","others":null,"success":true}
+
+2.4复核-特别说明录入接口
+http://10.1.6.11/pos-commu/specialExplain/saveSpecialExplain.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/json; charset=UTF-8
+参数：
+{"policyId":"42073903544931503","content":"","commentId":"","commentType":"02"}
+响应：
+{"message":"保存成功！","others":null,"success":true}
+
+2.5复核-checkReviewRule接口
+http://10.1.6.11/pos-commu/personal/entry/proposal/checkReviewRule.do?magicX=ee940dd5fa5a5ff020021379277a33a6
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalId=42073903544931503
+响应：
+{"message":null,"others":null,"success":true}
+
+3.新契约复核-提交接口
+http://10.1.6.11/pos-commu/personal/entry/proposal/confirmProposal.do?magicX=04779ff88c8432d7ea94dba107993db8
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalId=41981180399102857&personUW=false
+响应：
+{"message":"","others":"2","success":true}
+注：others为1时自动核保通过；为2时人工核保
+
+
+
+
+
+
+
+

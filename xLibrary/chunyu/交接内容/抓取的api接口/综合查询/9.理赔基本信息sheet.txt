@@ -1,0 +1,68 @@
+-----理赔基本信息sheet页-----------------------------------------
+1.综合查询-理赔基本信息sheet页接口
+url:
+http://10.1.6.1/query-commu/claim/q/claimlist.do?magicX=fb8fd596671ec5b11042b5cbf45d45c0
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=10&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=caseNo&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=arouseName&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=applyType&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=productName&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=calsignTime&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=claimResult&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=payAmount&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=caseStatus&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&mDataProp_9=caseNo&sSearch_9=&bRegex_9=false&bSearchable_9=true&bSortable_9=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088617698036768&proposalNo=1101020427161941&proposalId=69274257481609118&policyId=71175389855780814&target=1&chlNotTimely=false&businessNo=ed62379e206a4bdfa78528bf604f7b42&moduleId=claimImagePer
+响应：
+{"sEcho":1,"iTotalRecords":2,"iTotalDisplayRecords":2,"iDisplayStart":0,"resultData":[{"id":"ed62379e206a4bdfa78528bf604f7b42","productName":"君康康立方重大疾病保险","productId":"10184","custId":3730384,"policyId":"71175389855780814","policyNo":null,"caseNo":"71177040817579053","arouseName":"测试","applyType":"03","calsignTime":"2021-05-02","claimResult":"1","payAmount":50000.00,"caseStatus":"50","feeStatus":null,"arouseCertiType":null,"arouseCertiNo":null,"arouseSex":null},{"id":"8718aa696cf244169fe0cc888af3cdc0","productName":"君康康立方重大疾病保险","productId":"10184","custId":3730384,"policyId":"71175389855780814","policyNo":null,"caseNo":"71244821179209721","arouseName":"测试","applyType":"03","calsignTime":null,"claimResult":"1","payAmount":0.00,"caseStatus":"30","feeStatus":null,"arouseCertiType":null,"arouseCertiNo":null,"arouseSex":null}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+
+
+
+
+2.综合查询-理赔基本信息sheet页接口-理赔详情信息
+url:get接口
+http://10.1.6.1/query-commu/claim/q/claimdetail.do?r=0.6377140029231231&magicX=fb8fd596671ec5b11042b5cbf45d45c0&policyNo=8088617698036768&proposalNo=1101020427161941&proposalId=69274257481609118&policyId=71175389855780814&target=1&chlNotTimely=false&moduleId=policyMainPer&businessNo=ed62379e206a4bdfa78528bf604f7b42
+请求参数：
+无
+响应：
+{"message":"ok","others":{"caseNo":"71177040817579053","reportDate":"2021-05-02","reportNo":"02000086210502023","name":"测试","relationship":"00","arouseName":"测试","accCustId":"3730384","arouseCertiType":"22","arouseCertiNo":"1234535476","deathDate":null,"acceptTime":"2021-05-02","acceptDecision":"0","caseLevel":"1","accDate":"2021-05-02","applyType":"03","accDesc":"","accReason":"2","deathCause":null,"approveTime":"2021-05-02","approveDecision":"1","adjustmentRejectReason":null,"approveRemark":"1","acceptorId":64336,"calsignId":null,"auditRemark":null,"calsignTime":"2021-05-02","approverId":null,"calsignRemark":"1","rejectReason":null,"policyId":"71175389855780814","productName":"君康康立方重大疾病保险","productId":"10184","liabName":null,"calcAmount":50000.00,"adjustAmount":0.00,"payAmount":50000.00,"mobilePhone":null,"policyNo":null,"realPay":"0"},"success":true}
+
+
+--json格式化
+{
+	"message": "ok",
+	"others": {
+		"caseNo": "71177040817579053",   #案件号
+		"reportDate": "2021-05-02",   #报案日期
+		"reportNo": "02000086210502023",   #报案号
+		"name": "测试",   #报案人
+		"relationship": "00",   #报案人与出险人关系
+		"arouseName": "测试",   #出险人
+		"accCustId": "3730384",   #出险人客户ID
+		"arouseCertiType": "22",   #出险人证件类型
+		"arouseCertiNo": "1234535476",   #出险人证件号码
+		"deathDate": null,   #死亡日期
+		"acceptTime": "2021-05-02",   #立案日期
+		"acceptDecision": "0",   #立案决定
+		"caseLevel": "1",   #案件等级
+		"accDate": "2021-05-02",   #事故日期
+		"applyType": "03",   #事故类型
+		"accDesc": "",   #事故描述
+		"accReason": "2",   #出险原因
+		"deathCause": null,   #死亡原因
+		"approveTime": "2021-05-02",   #理算完成日期
+		"approveDecision": "1",   #理算决定
+		"adjustmentRejectReason": null,   #理算拒绝原因
+		"approveRemark": "1",   #
+		"acceptorId": 64336,   #签批人id
+		"calsignId": null,   #
+		"auditRemark": null,   #拒绝原因
+		"calsignTime": "2021-05-02",   #签批日期
+		"approverId": null,   #
+		"calsignRemark": "1",   #签批审核说明
+		"rejectReason": null,   #
+		"policyId": "71175389855780814",   #
+		"productName": "君康康立方重大疾病保险",   #险种名称
+		"productId": "10184",   #
+		"liabName": null,   #
+		"calcAmount": 50000.00,   #理算金额
+		"adjustAmount": 0.00,   #调整金额
+		"payAmount": 50000.00,   #赔付金额
+		"mobilePhone": null,   #
+		"policyNo": null,   #
+		"realPay": "0"   #
+	},
+	"success": true
+}

@@ -1,0 +1,10 @@
+1.系统用户解锁接口
+url：
+http://10.1.6.11/admin-service/deblocking.do
+header：
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+userName=xingcyby&magicX=661f2440a333c7e43d59e9fd31007784
+响应：
+{"message":null,"others":null,"success":true}
+

@@ -1,0 +1,24 @@
+1.启用/关闭批处理任务接口
+url:
+http://10.1.6.1/batch-admin/batch/saveBatchJob.do?magicX=f853ba3e702b495c4ffcb4f04e32fa3f
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+batchSystem=PA&jobId=3021&isEnable=Y&jobName=%E9%95%BF%E6%9C%9F%E9%99%A9%E6%BB%A1%E6%9C%9F%E6%89%B9%E5%A4%84%E7%90%86
+响应：
+{"message":"[长期险满期批处理]更新成功","others":null,"success":true}
+
+2.提交批处理任务接口
+url:
+http://10.1.6.1/batch-admin/batch/saveBatchSubmit.do?magicX=f853ba3e702b495c4ffcb4f04e32fa3f
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+jobId=3021&batchSystem=PA&paramCode=policyNo&paramValue=8088622620898968&paramCode=processDate&paramValue=2031-07-22
+响应：
+{"message":"任务[2866330]提交成功!","others":null,"success":true}
+
+
+
+
+
+
+

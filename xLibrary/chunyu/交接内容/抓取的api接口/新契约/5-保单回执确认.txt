@@ -1,0 +1,18 @@
+1.保单确认回执-查询接口（非必用接口）
+http://10.1.6.11/pos-commu/example/policyReceiptConfirm/q/policyReceiptConfirm.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=policyNo&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=proposalNo&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=proposalType&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=applicationDate&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=proposalStatus&sSearch_5=&bRegex_5=false&bSearchable_5=false&bSortable_5=false&mDataProp_6=organId&sSearch_6=&bRegex_6=false&bSearchable_6=false&bSortable_6=false&mDataProp_7=policyChannel&sSearch_7=&bRegex_7=false&bSearchable_7=false&bSortable_7=false&mDataProp_8=&sSearch_8=&bRegex_8=false&bSearchable_8=false&bSortable_8=false&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&proposalNo=&policyNo=8088589194266368&magicX=05c7447a1a77bdcd3eda8868a91536ba
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"policyNo":"8088589194266368","proposalNo":"2020061615205922","proposalType":"1","applicationDate":"2020-06-16","proposalStatus":"01","organId":10007,"policyChannel":"09","policyDeliveryDate":null,"issueDate":"2020-06-01"}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+
+2.保单回执确认-提交接口
+http://10.1.6.11/pos-commu/example/policyReceiptConfirm/q/policyReceiptConfirmSaveAction.do?magicX=05c7447a1a77bdcd3eda8868a91536ba
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+proposalNo=2020061615205922&callBackDate=2019-08-01&callBackWay=01&appointVisitStartTime=2020-06-16+16%3A30&appointVisitEndTime=2020-06-16+16%3A30&policyNo=8088589194266368
+响应：
+{"message":"保存成功","others":null,"success":true}
+
+
+

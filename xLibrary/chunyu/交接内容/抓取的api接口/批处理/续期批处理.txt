@@ -1,0 +1,41 @@
+---  续期预收费用记录表批处理-----------
+1.启动续期预收费用记录表接口
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+header：
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+batchSystem=PA&jobId=1001&isEnable=Y&jobName=%E7%BB%AD%E6%9C%9F%E9%A2%84%E6%94%B6%E8%B4%B9%E7%94%A8%E8%AE%B0%E5%BD%95%E8%A1%A8&magicX=03c3a46a481b4b9402c4d60ee8ec39d5
+响应：
+{"message":"[续期预收费用记录表]更新成功","others":null,"success":true}
+
+
+2.续期预收费用记录表提交接口
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+header：
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+jobId=1001&batchSystem=PA&paramCode=policyNo&paramValue=8088609521934368&paramCode=processDate&paramValue=2017-11-20&magicX=03c3a46a481b4b9402c4d60ee8ec39d5
+响应：
+{"message":"任务[2698094]提交成功!","others":null,"success":true}
+
+
+---   续期预收转应收批处理--------
+1.启动续期预收转应收接口
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+header：
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+batchSystem=PA&jobId=1003&isEnable=Y&jobName=%E7%BB%AD%E6%9C%9F%E9%A2%84%E6%94%B6%E8%BD%AC%E5%BA%94%E6%94%B6&magicX=03c3a46a481b4b9402c4d60ee8ec39d5
+响应：
+{"message":"[续期预收转应收]更新成功","others":null,"success":true}
+
+2.续期预收转应收提交接口
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+header：
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+jobId=1003&batchSystem=PA&magicX=26ac953380a73fab0326d84bd58ecdee
+响应：
+{"message":"任务[2697935]提交成功!","others":null,"success":true}
+
+

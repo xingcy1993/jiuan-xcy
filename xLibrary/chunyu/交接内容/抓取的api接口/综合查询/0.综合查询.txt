@@ -1,0 +1,12 @@
+1.综合查询-查询按钮接口
+url:
+http://10.1.6.11/query-commu/queryPolicy/query.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=proposalNo&sSearch_1=&bRegex_1=false&bSearchable_1=false&bSortable_1=false&mDataProp_2=policyNo&sSearch_2=&bRegex_2=false&bSearchable_2=false&bSortable_2=false&mDataProp_3=name&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=submitChannel&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=effectiveDate&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=expiryDate&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=policyStatus&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=proposalNo&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&proposalNo=&policyNo=8088762766962168&queryRole=001&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"proposalNo":"1101021123103825","policyNo":"8088762766962168","policyId":"55862892202843927","proposalId":"55862817748291292","businessNo":null,"target":"1","partitionIndi":null,"effectiveDate":1605484800000,"submitChannel":"03","expiryDate":253392451200000,"policyStatus":"01","name":"张三又","productId":null,"organId":"10008"}],"isSuccess":true,"message":null,"pageSize":100000,"pageNum":1}
+
+
+
+

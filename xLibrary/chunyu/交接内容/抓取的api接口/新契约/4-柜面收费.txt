@@ -1,0 +1,34 @@
+1.柜面收付费查询接口
+http://10.1.6.11/bcp-commu/bcpCash/FeeQuery.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=policyNo&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=orgainId&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=accoName&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=payOrCollect&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=serviceId&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=amount&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=insertTime&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&orgainId=10000&insertTime=&payOrCollect=&policyNo=8088589194265368&serviceId=&userNo=4b01695f278093f1b1a4488da21c4068&magicX=4b01695f278093f1b1a4488da21c4068
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"offsetSumId":"32748630363913838","payMode":"00","bankCode":"12","amount":100000.00,"accoName":"吕文宏","certiCode":"07041426","accoNo":"6222620210002025293","orgainId":"10018","payOrCollect":"AR","policyNo":"8088000001177128","serviceId":"90051","premPurposal":null,"currencyId":null,"certiType":"17","insertTime":1546092010000,"priorWorkDay":null,"updatetime":1548140670000,"proposalNo":"8088000001177128","feeStatus":"0","submitChannel":null,"subSalesChannel":null,"opBatchNo":null,"organDetail":null,"busiDate":null,"isInAuditPeriod":null,"isTimeLimit":null,"optUsser":null,"userNo":"10000"}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+
+
+2.柜面收付费保存接口（非必用接口）
+http://10.1.6.11/bcp-commu/bcpCash/CashApproveInfoSave.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+custName=%E5%90%95%E6%96%87%E5%AE%8F&custCertiType=17&custCertiCode=07041426&accountNo=6222620210002025293&bak3=%E6%97%A0&bankEndorse=123123&feeConfirmDate=2020-6-16&internalAccount=08-400301040007336&internalBankCode=05&feeChannel=CASH-10017-AR&offsetSumId=32748630363913838&bak2=9f2b0fc02b2b145c1f39b8d4a2c73dbb&bankCode=12&feeStatus=&cashOrgId=10017&internalBankName=%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E9%93%B6%E8%A1%8C%E7%BB%A5%E5%8C%96%E5%B8%82%E5%A4%A7%E6%9C%89%E6%94%AF%E8%A1%8C&magicX=9f2b0fc02b2b145c1f39b8d4a2c73dbb
+响应：
+{"message":"OK","others":null,"success":true}
+
+3.柜面收付费审核接口
+http://10.1.6.11/bcp-commu/bcpCash/finishFeeFlow.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+custName=%E5%91%A8%E4%BE%9B%E5%8F%AF&custCertiType=2&custCertiCode=1345467354425&accountNo=64556745353454353&bak2=b2b1b08f4a912cf9d256e97bc8f26e3f&bankEndorse=123123&feeConfirmDate=2020-6-16&internalAccount=-1&internalBankCode=&feeChannel=CASH-10017-AR&bankCode=01&offsetSumId=42054530902806741&bak3=%E6%97%A0&cashOrgId=10017&internalBankName=%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E9%93%B6%E8%A1%8C%E7%BB%A5%E5%8C%96%E5%B8%82%E5%A4%A7%E6%9C%89%E6%94%AF%E8%A1%8C&magicX=b2b1b08f4a912cf9d256e97bc8f26e3f
+响应：
+{"message":"费用审批成功已推回核心","others":null,"success":true}
+
+
+3.1柜面收费-FeeQuery接口
+http://10.1.6.11/bcp-commu/bcpCash/FeeQuery.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=policyNo&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=orgainId&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=accoName&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=payOrCollect&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=serviceId&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=amount&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=insertTime&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&orgainId=10000&insertTime=&payOrCollect=&policyNo=8088589194265468&serviceId=&userNo=b94e3263bf4018f3df0e000279449e1c&magicX=b94e3263bf4018f3df0e000279449e1c
+响应：
+{"sEcho":1,"iTotalRecords":0,"iTotalDisplayRecords":0,"iDisplayStart":0,"resultData":[],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+

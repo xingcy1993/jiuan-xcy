@@ -1,0 +1,29 @@
+-----红利信息sheet页-----------------------------------------
+1.综合查询-红利信息sheet页_红利领取方式接口
+url:
+http://10.1.6.11/query-commu/GRPPolicy/q/list.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=productName&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=bonusStartYear&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=nextBonusYear&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=bonusPayType&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=payMode&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=bankCode&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=bankAccountCode&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=relaPolicyNo&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalNo=1101021123103825&proposalId=55862817748291292&policyId=55862892202843927&target=1&moduleId=bonusPayWay&magicX=61f25614a3b31ef6237d2997eb229306
+响应：
+{"sEcho":1,"iTotalRecords":0,"iTotalDisplayRecords":0,"iDisplayStart":0,"iDisplayLength":5,"resultData":[],"message":{"message":null,"others":"SELECT pd.PRODUCT_NAME productName,\r\n       DATE_ADD(p.effective_Date, INTERVAL 1 YEAR) bonusStartYear,\r\n       b.ALLOCATE_DATE nextBonusYear,\r\n       b.DIVIDEND_CHOICE bonusPayType,\r\n       CASE WHEN b.DIVIDEND_CHOICE = '3' AND b.RELA_POLICY_NO IS NULL THEN b.POLICY_NO\r\n            WHEN b.DIVIDEND_CHOICE = '3' AND b.RELA_POLICY_NO IS NOT NULL THEN b.RELA_POLICY_NO\r\n       END relaPolicyNo,\r\n       a.PAY_MODE payMode,\r\n       a.BANK_CODE bankCode,\r\n       a.ACCOUNT_CODE bankAccountCode\r\nFROM   v_pa_policy p,\r\n       v_pa_policy_product ppd,\r\n       v_iiws_product pd,\r\n       v_pa_bonus_allocate b LEFT JOIN v_pa_account a ON b.ALLO_ACCOUNT_ID=a.ACCOUNT_ID AND b.POLICY_NO=a.POLICY_CODE\r\nWHERE  b.ALLOCATE_TYPE = '1'\r\nAND    b.POLICY_NO = p.POLICY_NO\r\nAND    b.PRODUCT_ID = pd.PRODUCT_ID\r\nAND    pd.PRODUCT_ID = ppd.PRODUCT_ID\r\nAND    ppd.POLICY_ID = p.POLICY_ID\r\n and  p.POLICY_NO='8088762766962168'","success":true},"pageSize":5,"pageNum":1}
+
+
+2.综合查询-红利信息sheet页_账号记录接口
+url:
+http://10.1.6.11/query-commu/bonus/q/payAccount.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=fundCode&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=fundCode&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=lastAllocateDate&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=lastAnnualBalanceDate&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=moneyType&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=interestCapital&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=interestCapital&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=interestCapital&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalNo=1101021123103825&proposalId=55862817748291292&policyId=55862892202843927&target=1&moduleId=bonusPayWay&magicX=61f25614a3b31ef6237d2997eb229306
+响应：
+{"sEcho":1,"iTotalRecords":0,"iTotalDisplayRecords":0,"iDisplayStart":0,"resultData":[],"isSuccess":true,"message":null,"pageSize":100000,"pageNum":1}
+
+
+3.综合查询-红利信息sheet页_账号交易记录接口
+url:
+http://10.1.6.11/query-commu/bonus/q/transDetail.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=11&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=fundCode&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=fundCode&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=dealTime&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=transAmount&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=interestCapital&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=bonusPayType&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=transCode&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=relaPolicyNo&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&mDataProp_9=bankCode&sSearch_9=&bRegex_9=false&bSearchable_9=true&bSortable_9=true&mDataProp_10=bankAccountCode&sSearch_10=&bRegex_10=false&bSearchable_10=true&bSortable_10=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalNo=1101021123103825&proposalId=55862817748291292&policyId=55862892202843927&target=1&moduleId=bonusTransDetail&magicX=61f25614a3b31ef6237d2997eb229306
+响应：
+{"sEcho":1,"iTotalRecords":0,"iTotalDisplayRecords":0,"iDisplayStart":0,"resultData":[],"isSuccess":true,"message":null,"pageSize":100000,"pageNum":1}

@@ -1,0 +1,27 @@
+1.启动批处理：
+wift_pa
+UPDATE t_batch_job a SET a.IS_ENABLE='Y' WHERE a.`JOB_ID` in ('2','4');
+
+2.判断批处理是否启动成功
+wift_pa
+UPDATE t_batch_job a SET a.IS_ENABLE='Y' WHERE a.`JOB_ID` in ('2','4');
+
+3.综合查询_生存给付信息sheet_账户交易记录查询接口
+url:
+http://10.1.6.11/query-commu/GRPPolicy/q/list.do
+header:
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+sEcho=1&iColumns=13&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=500&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=fundCode&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=fundCode&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=dealTime&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=transAmount&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=transAmount&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=rate&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=cashAmount&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&mDataProp_8=serviceId&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&mDataProp_9=payOption&sSearch_9=&bRegex_9=false&bSearchable_9=true&bSortable_9=true&mDataProp_10=relatedPolicyNo&sSearch_10=&bRegex_10=false&bSearchable_10=true&bSortable_10=true&mDataProp_11=bankCode&sSearch_11=&bRegex_11=false&bSearchable_11=true&bSortable_11=true&mDataProp_12=accountCode&sSearch_12=&bRegex_12=false&bSearchable_12=true&bSortable_12=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088577846444068&proposalNo=1101021106160845&proposalId=54413828280260639&policyId=54413868024090974&target=1&moduleId=survivalPayDetial&magicX=456b2fdc9c3b7c88d18f46183891a9fd
+响应：
+{"sEcho":1,"iTotalRecords":5,"iTotalDisplayRecords":5,"iDisplayStart":0,"iDisplayLength":5,"resultData":[{"transAmount":10000.00000,"dealTime":"2020-11-07","fundCode":"05","rate":"0.00%","cashAmount":10000.00000000,"payOption":"03","transCode":"8","changeId":"54415932160242564","serviceId":"100001"},{"transAmount":350.00000,"dealTime":"2021-11-07","fundCode":"05","rate":"0.00%","cashAmount":10350.00000000,"payOption":"03","transCode":"12","changeId":"54653215816043740","serviceId":"100001"},{"transAmount":10000.00000,"dealTime":"2021-11-07","fundCode":"05","rate":"0.00%","cashAmount":20350.00000000,"payOption":"03","transCode":"8","changeId":"54653215816043740","serviceId":"100001"},{"transAmount":712.25000,"dealTime":"2022-11-07","fundCode":"05","rate":"0.00%","cashAmount":21062.25000000,"payOption":"03","transCode":"12","changeId":"54653629512062337","serviceId":"100001"},{"transAmount":10000.00000,"dealTime":"2022-11-07","fundCode":"05","rate":"0.00%","cashAmount":31062.25000000,"payOption":"03","transCode":"8","changeId":"54653629512062337","serviceId":"100001"}],"message":{"message":null,"others":"SELECT null accountCode,\r\n       null bankCode,\r\n       null relatedPolicyNo,\r\n       s.fund_code fundCode,\r\n       s.deal_time dealTime,\r\n       s.trans_amount transAmount,\r\n       p.PAY_OPTION payOption,\r\n       s.trans_code transCode,\r\n       tppc.service_id serviceId,\r\n       '0.00%' rate,\r\n       s.account_value cashAmount,\r\n       s.trans_chg_id changeId\r\nFROM   v_pa_fund_trans s\r\nLEFT JOIN v_pa_policy_change tppc ON s.trans_chg_id = tppc.change_id\r\nLEFT JOIN v_pa_pay_plan_payee p ON s.item_id=p.ITEM_ID AND s.trans_chg_id=p.CHG_ID\r\nWHERE  s.fund_code = '05'\r\nAND    (p.PAY_OPTION = '03' or p.PAY_OPTION IS NULL)\r\n and s.policy_no ='8088577846444068'\r\nUNION ALL\r\nSELECT a.ACCOUNT_CODE,\r\n       a.BANK_CODE,\r\n       CASE WHEN p.PAY_OPTION IN ('05', '06') THEN p.RELATED_POLICY_NO ELSE NULL END,\r\n       null,\r\n       p.PAY_DATE,\r\n       p.PAY_AMOUNT,\r\n       p.PAY_OPTION,\r\n       null,\r\n       tppc.service_id,\r\n       '0.00%',\r\n       null,\r\n       p.CHG_ID\r\nFROM   v_pa_pay_plan_payee p\r\nLEFT JOIN v_pa_policy_change tppc ON p.CHG_ID = tppc.change_id AND p.POLICY_NO= (SELECT POLICY_NO FROM v_pa_policy WHERE policy_id = tppc.policy_id)\r\nLEFT JOIN v_pa_account a ON p.PAYEE_ACCOUNT_ID = a.ACCOUNT_ID AND p.POLICY_NO = a.POLICY_CODE\r\nWHERE  p.PAY_OPTION IN ('01','02','05','06')\r\n and p.policy_no ='8088577846444068'\r\nORDER BY dealTime, changeId, FIELD(transCode+0, 12, 13, 8, 14)","success":true},"pageNum":1,"pageSize":5}
+
+
+
+
+
+
+
+
+
+

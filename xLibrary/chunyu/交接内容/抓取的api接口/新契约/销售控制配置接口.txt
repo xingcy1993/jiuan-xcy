@@ -1,0 +1,24 @@
+1.核心：银保
+url:
+http://10.1.6.11/admin-service/salesControl/queryConditionSalesControl.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=productId&sSearch_0=&bRegex_0=false&bSearchable_0=false&bSortable_0=false&mDataProp_1=organId&sSearch_1=&bRegex_1=false&bSearchable_1=false&bSortable_1=false&mDataProp_2=policyChannel&sSearch_2=&bRegex_2=false&bSearchable_2=false&bSortable_2=false&mDataProp_3=partnerId&sSearch_3=&bRegex_3=false&bSearchable_3=false&bSortable_3=false&mDataProp_4=salesChannel&sSearch_4=&bRegex_4=false&bSearchable_4=false&bSortable_4=false&mDataProp_5=startDate&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=endDate&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=status&sSearch_7=&bRegex_7=false&bSearchable_7=false&bSortable_7=false&mDataProp_8=listId&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&params=%7B%22productId%22%3A%2210038%22%2C%22organId%22%3A%22%22%2C%22policyChannel%22%3A%22%22%2C%22salesChannel%22%3A%22%22%2C%22status%22%3A%22%22%2C%22startDate%22%3A%22%22%2C%22endDate%22%3A%22%22%7D&magicX=a46926bb97b858d1ac3677ef1d084f4d
+响应：
+{"sEcho":1,"iTotalRecords":27,"iTotalDisplayRecords":27,"iDisplayStart":0,"resultData":[{"productId":"10038","organId":"10007","policyChannel":"03","partnerId":"8000000","status":"01","listId":"3548","salesChannel":null,"startDate":"2016-01-01","endDate":null},{"productId":"10038","organId":"10032","policyChannel":"03","partnerId":"100000","status":"01","listId":"13872","salesChannel":null,"startDate":"2000-01-01","endDate":null},{"productId":"10038","organId":"10020","policyChannel":"03","partnerId":"100000","status":"01","listId":"13860","salesChannel":null,"startDate":"2000-01-01","endDate":null},{"productId":"10038","organId":"10019","policyChannel":"03","partnerId":"100000","status":"01","listId":"13859","salesChannel":null,"startDate":"2000-01-01","endDate":null},{"productId":"10038","organId":"10021","policyChannel":"03","partnerId":"100000","status":"01","listId":"13861","salesChannel":null,"startDate":"2000-01-01","endDate":null}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+
+
+
+
+2.多元、中介-业管
+url:
+http://10.8.1.156/gateway/micro-serv-broker-web/saleControl/list
+application/json;charset=utf-8
+参数：
+{"tenantId":"2017032717500543538","channelType":"2","mcomId":"1000438","pcomId":"","issueWay":"","supplierId":"","prodId":"10001","startStatus":"1003","saleSdateStart":"","saleSdateEnd":"","saleEdateStart":"","saleEdateEnd":"","page":1,"rows":10,"head":{"appid":"FD2AE2039EB876C65901DA8DC1FF2AE8","appkey":"850BC60DF3DE673EDF978E7607AAADDE","sign":"","transDate":"20210419","transTime":"152944","transCode":"BRK-591","openId":"zjpretest"}}
+响应：
+{"head":{"transId":"1000000000104941801","appid":"FD2AE2039EB876C65901DA8DC1FF2AE8","server":"","transDate":"20210419","transTime":"152945","transCode":"BRK-591","version":"NORMAL-1.0"},"resultCode":"10","resultMsg":"交易成功","t":{"resultCode":"10","resultMsg":"交易成功","page":"1","pageCount":"1","count":"2","offset":"0","rows":"10","list":[{"listId":"2020080617483978830","tenantId":"2017032717500543538","channelTypeName":"中介渠道","channelType":"2","mcomName":"北京分公司","mcomId":"1000440","scomName":"","scomId":"","supplierId":"2019021809452022263","supplierName":"君康人寿","issueWay":"2","prodId":"10001","prodCode":"3218","prodDesc":"3218--君康颐养一生养老年金保险","chargePeriod":"","saleSdate":"1596211200000","saleEdate":"253402185600000","startStatus":"1003","busiRemarks":"","ynExcludeCom":"N","pcomId":"2200000","pcomFname":"永达理保险经纪有限公司","operator":"pretest","auditor":"","remark":"2432432","logId":"2020080617483978833","changeId":"2020080617483978831","preLogId":"","validStatus":"1","changeSeq":"1","isLatest":"Y","busiType":"","isCheckStateAndDate":"Y"},{"listId":"2020072913552680603","tenantId":"2017032717500543538","channelTypeName":"中介渠道","channelType":"2","mcomName":"江苏分公司","mcomId":"1000443","scomName":"","scomId":"","supplierId":"2019021809452022263","supplierName":"君康人寿","issueWay":"1","prodId":"10001","prodCode":"3218","prodDesc":"3218--君康颐养一生养老年金保险","chargePeriod":"","saleSdate":"1593532800000","saleEdate":"1596124800000","startStatus":"1003","busiRemarks":"","ynExcludeCom":"Y","pcomId":"2700000","pcomFname":"方胜磐石保险经纪有限公司","operator":"pretest","auditor":"","remark":"213123","logId":"2020072913552680606","changeId":"2020072913552680604","preLogId":"","validStatus":"1","changeSeq":"1","isLatest":"Y","busiType":"","isCheckStateAndDate":"Y"}]}}
+
+
+
+

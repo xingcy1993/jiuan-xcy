@@ -1,0 +1,24 @@
+1.启用/关闭批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+batchSystem=PA&jobId=3003&isEnable=Y&jobName=%E5%88%86%E7%BA%A2%E9%99%A9%E6%B4%BE%E5%8F%91%E6%89%B9%E5%A4%84%E7%90%86&magicX=0a9bf6b9db8aeb68a10a7e84f86d7bce
+响应：
+{"message":"[分红险派发批处理]更新成功","others":null,"success":true}
+
+2.提交批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+jobId=3003&batchSystem=PA&paramCode=policyNo&paramValue=8088615306062768&paramCode=processDate&paramValue=2022-09-27&magicX=0a9bf6b9db8aeb68a10a7e84f86d7bce
+响应：
+{"message":"任务[2928758]提交成功!","others":null,"success":true}
+
+
+
+
+
+
+

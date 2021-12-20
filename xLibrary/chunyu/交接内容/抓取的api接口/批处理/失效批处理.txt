@@ -1,0 +1,24 @@
+1.启用/关闭批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+batchSystem=PA&jobId=1010&isEnable=Y&jobName=%E5%A4%B1%E6%95%88%E8%87%AA%E5%9E%AB%E6%89%B9%E5%A4%84%E7%90%86&magicX=39480d578630e990338e7993ee84e06f
+响应：
+{"message":"[失效自垫批处理]更新成功","others":null,"success":true}
+
+2.提交批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+jobId=1010&batchSystem=PA&paramCode=policyNo&paramValue=8088605543982368&paramCode=processDate&paramValue=2017-07-12&magicX=39480d578630e990338e7993ee84e06f
+响应：
+{"message":"任务[2437153]提交成功!","others":null,"success":true}
+
+
+
+
+
+
+

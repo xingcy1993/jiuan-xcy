@@ -1,0 +1,26 @@
+
+1.添加：
+url:
+http://10.1.6.11/policy-issue-commu/invest/investRateDefAdd.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+productId=10223&fundCode=02&rateType=2&rate=0.049&startDate=2020-01-01&endDate=9999-12-31&publicTime=2020-01-01&rateId=&magicX=0b986fec11ad93ed7ab1aa8b23005210
+响应：
+{"message":"处理成功","others":null,"success":true}
+
+2.修改：
+url:
+http://10.1.6.11/policy-issue-commu/invest/investRateDefUpdate.do
+参数：
+productId=10223&fundCode=02&rateType=2&rate=0.049&startDate=2010-01-01&endDate=9999-12-31&publicTime=2018-04-01&rateId=64073733090183230&magicX=eaa5012eb19bb56ad142e08465420917
+响应：
+{"message":"处理成功","others":null,"success":true}
+
+3.查询
+url:
+http://10.1.6.11/policy-issue-commu/invest/investRateDefQuery.do
+application/x-www-form-urlencoded; charset=UTF-8
+参数：
+sEcho=1&iColumns=8&sColumns=%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=-1&mDataProp_0=productId&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=fundCode&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=true&mDataProp_2=rateType&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=rate&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=startDate&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=endDate&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=publicTime&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&productId=10223&rateType=&fundCode=&publicTime=2018-01-01&magicX=eaa5012eb19bb56ad142e08465420917
+响应：
+{"sEcho":1,"iTotalRecords":2,"iTotalDisplayRecords":2,"iDisplayStart":0,"resultData":[{"rateId":"64065141453812787","productId":10223,"fundCode":"02","rateType":1,"startDate":"2018-01-01","endDate":"9999-12-31","publicTime":"2018-01-01","rate":0.03000,"insertTime":1614268800000,"updateTime":1546272000000,"recorderId":null,"updaterId":null,"rateStatus":"2"},{"rateId":"64073732590901128","productId":10223,"fundCode":"02","rateType":2,"startDate":"2010-01-01","endDate":"9999-12-31","publicTime":"2018-01-01","rate":0.04900,"insertTime":1546272000000,"updateTime":1546272000000,"recorderId":null,"updaterId":null,"rateStatus":"2"}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}

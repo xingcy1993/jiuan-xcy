@@ -1,0 +1,39 @@
+--年金派发批处理--------
+1.启用/关闭批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+batchSystem=PA&jobId=2&isEnable=Y&jobName=年金派发批处理&magicX=39480d578630e990338e7993ee84e06f
+响应：
+{"message":"[年金派发批处理]更新成功","others":null,"success":true}
+
+2.提交批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+jobId=2&batchSystem=PA&paramCode=policyNo&paramValue=24352454355&paramCode=processDate&paramValue=2020-07-15&magicX=eb1e6afcefc1d50938328b34238d1dd0
+响应：
+{"message":"任务[2698201]提交成功!","others":null,"success":true}
+
+
+--计算年金首期派发日及派发截止日批处理-------
+1.启用/关闭批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchJob.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+batchSystem=PA&jobId=4&isEnable=Y&jobName=计算年金首期派发日及派发截止日批处理&magicX=39480d578630e990338e7993ee84e06f
+响应：
+{"message":"[计算年金首期派发日及派发截止日批处理]更新成功","others":null,"success":true}
+
+2.提交批处理任务接口
+url:
+http://10.1.6.11/batch-admin/batch/saveBatchSubmit.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+jobId=4&batchSystem=PA&paramCode=policyNo&paramValue=8778567474&paramCode=processDate&paramValue=2017-07-15&magicX=eb1e6afcefc1d50938328b34238d1dd0
+响应：
+{"message":"任务[2698203]提交成功!","others":null,"success":true}
+

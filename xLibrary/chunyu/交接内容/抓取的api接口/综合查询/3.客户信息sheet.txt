@@ -1,0 +1,55 @@
+-----客户信息sheet页-----------------------------------------
+1.综合查询-客户信息sheet页_投保人信息
+url:
+http://10.1.6.11/query-commu/customer/q/customerByRole.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=8&sColumns=%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=false&mDataProp_1=name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=gender&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=birthday&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=false&mDataProp_4=certiType&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=false&mDataProp_5=certiCode&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=false&mDataProp_6=grade&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=false&mDataProp_7=noticeId&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalId=55862817748291292&proposalNo=1101021123103825&policyId=55862892202843927&target=1&queryRole=90000&businessNo=0&moduleId=prem_track_dt&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"name":"张三又","gender":"0","birthday":"1988-01-01","certiCode":"4567343400742","certiType":"2","customerId":3281393,"hasSocialSecurity":"0","keyId":"19e659e5c25e4954ae996b59bb68a09b","benOrder":0,"grade":"","pickOrder":0,"permittedAge":0,"policyId":"55862892202843927"}],"isSuccess":true,"message":null,"pageSize":5,"pageNum":1}
+
+
+
+2.综合查询-客户信息sheet页_顺位投保人信息
+url:
+http://10.1.6.11/query-commu/customer/q/customerByRole.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=9&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=false&mDataProp_1=name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=gender&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=birthday&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=false&mDataProp_4=certiType&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=false&mDataProp_5=certiCode&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=false&mDataProp_6=relationship&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=false&mDataProp_7=grade&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=false&mDataProp_8=noticeId&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalId=55862817748291292&proposalNo=1101021123103825&policyId=55862892202843927&target=1&queryRole=90000&businessNo=1&moduleId=prem_track_dt&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"name":"张斯第","gender":"0","birthday":"1988-01-02","certiCode":"4567343400743","certiType":"2","customerId":3281395,"hasSocialSecurity":"0","keyId":"825709f51240401cbaec080c52611e47","relationship":"99","benOrder":0,"grade":"","pickOrder":0,"permittedAge":0,"policyId":"55862892202843927"}],"isSuccess":true,"message":null,"pageSize":5,"pageNum":1}
+
+
+
+3.综合查询-客户信息sheet页_被保人信息
+url:
+http://10.1.6.11/query-commu/customer/q/customerByRole.do
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+sEcho=1&iColumns=12&sColumns=%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=5&mDataProp_0=%23&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=false&mDataProp_1=name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=gender&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=birthday&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=false&mDataProp_4=certiType&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=false&mDataProp_5=certiCode&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=false&mDataProp_6=benOrder&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=false&mDataProp_7=benePercent&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=false&mDataProp_8=relationship&sSearch_8=&bRegex_8=false&bSearchable_8=true&bSortable_8=false&mDataProp_9=isLegal&sSearch_9=&bRegex_9=false&bSearchable_9=true&bSortable_9=false&mDataProp_10=grade&sSearch_10=&bRegex_10=false&bSearchable_10=true&bSortable_10=false&mDataProp_11=noticeId&sSearch_11=&bRegex_11=false&bSearchable_11=true&bSortable_11=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&policyNo=8088762766962168&proposalId=55862817748291292&proposalNo=1101021123103825&policyId=55862892202843927&target=1&queryRole=90000&businessNo=2&moduleId=prem_track_dt&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6
+响应：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"name":"法定继承人","gender":"","certiCode":"","certiType":"","hasSocialSecurity":"0","relationship":"","isLegal":"Y","benOrder":1,"grade":"","benePercent":100,"pickOrder":0,"permittedAge":0}],"isSuccess":true,"message":null,"pageSize":5,"pageNum":1}
+
+
+
+4.综合查询-客户信息sheet页_被保人信息
+url:
+http://10.1.6.1/query-commu/customer/q/customerByRole.do?magicX=1747f51d238c363739fd51a0d088e9fe
+application/x-www-form-urlencoded; charset=UTF-8
+请求参数：
+{"sEcho":1,"iTotalRecords":1,"iTotalDisplayRecords":1,"iDisplayStart":0,"resultData":[{"name":"亮亮","gender":"0","birthday":"1980-01-01","certiCode":"11010119800101","certiType":"21","customerId":3730275,"hasSocialSecurity":"0","keyId":"317656cc9463466384731c991892c12b","relationship":"00","benOrder":1,"grade":"","benePercent":100.00,"pickOrder":0,"permittedAge":0,"policyId":"70999409576924687"}],"isSuccess":true,"message":null,"pageNum":1,"pageSize":5}
+响应：
+{"sEcho":1,"iTotalRecords":0,"iTotalDisplayRecords":0,"iDisplayStart":0,"resultData":[],"isSuccess":true,"message":null,"pageSize":5,"pageNum":1}
+
+5.综合查询-客户信息sheet页_投保人详细信息接口
+url:get请求
+http://10.1.6.11/query-commu/customer/q/customerDetailByRole.do?r=0.8518499997839312&policyNo=8088762766962168&proposalNo=1101021123103825&proposalId=55862817748291292&policyId=55862892202843927&target=1&moduleId=perHoldCust&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6&queryRole=90000&businessNo=19e659e5c25e4954ae996b59bb68a09b|0
+响应：
+{"message":null,"others":{"name":"张三又","gender":"0","birthday":"1988-01-01","certiCode":"4567343400742","certiType":"2","certiValidEndDate":"2030-01-01","marriageId":"20","height":167.00,"weight":67.00,"income":100000.00,"incomeSource":"01","incomeSourceNote":"wu","familyIncome":100000.00,"industryId":"03","jobCateId":"0001001","mobile":"18909892904","officeTel":"010-98343543","homeTel":"010-98343543","email1":"CRlH@qq.com","hasSocialSecurity":"0","residentType":"1","medicalInsType":"01","countryCode":"CHN","benOrder":0,"addressFormatType":"2","addressFormat1":"110000","addressFormat2":"110100","addressFormat3":"110101","addressFormat4":"建国门东大街22号","postCode":"121200","driverLicenseType":"06","pickOrder":0,"permittedAge":0,"policyId":"55862892202843927"},"success":true}
+
+
+6.综合查询-客户信息sheet页_被保人详细信息接口
+url:get请求
+http://10.1.6.11/query-commu/customer/q/customerDetailByRole.do?r=0.30428015405495656&policyNo=8088762766962168&proposalNo=1101021123103825&proposalId=55862817748291292&policyId=55862892202843927&target=1&moduleId=perHoldCust&magicX=7d1c374fd75b37c4af6480d3e0f9b4f6&queryRole=90000&businessNo=825709f51240401cbaec080c52611e47|1
+响应：
+{"message":null,"others":{"name":"张斯第","gender":"0","birthday":"1988-01-02","certiCode":"4567343400743","certiType":"2","certiValidEndDate":"2030-01-01","marriageId":"20","height":178.00,"weight":78.00,"income":5000000.00,"incomeSource":"01","incomeSourceNote":"wu","industryId":"02","jobCateId":"0001001","mobile":"18089827904","officeTel":"010-93456444","homeTel":"010-993433344","email1":"cOLbm@163.com","hasSocialSecurity":"0","residentType":"1","medicalInsType":"01","countryCode":"CHN","keyId":"f6fab10a226244f097bde54d22494256","relationship":"99","benOrder":0,"addressFormatType":"2","addressFormat1":"110000","addressFormat2":"110100","addressFormat3":"110101","addressFormat4":"建国门东大街22号","postCode":"120000","driverLicenseType":"06","pickOrder":0,"permittedAge":32,"policyId":"55862892202843927"},"success":true}
